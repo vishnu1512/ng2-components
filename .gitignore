@@ -2,6 +2,8 @@
 bin/
 bin-debug/
 bin-release/
+typings/
+node_modules/
 [Oo]bj/ # FlashDevelop obj
 [Bb]in/ # FlashDevelop bin
 
