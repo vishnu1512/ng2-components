@@ -1,6 +1,17 @@
 import { Component } from '@angular/core';
+import { ChecklistComponent } from './checklist/checklist.component';
+import {CheckItem} from './checklist/CheckItem';
+
 @Component({
   selector: 'my-app',
-  template: '<h1>My First Angular 2 App</h1>'
+  templateUrl: './app/app.component.html',
+  directives: [ChecklistComponent]
 })
-export class AppComponent { }
+export class AppComponent {
+	checklistTitle = "Test Checklist";
+	checkList = [
+		{label:"item1",checked:false},
+		{label:"item2",checked:true}
+	];
+	checkRootClass="a b"
+ }

@@ -1,0 +1,4 @@
+<h1>Components</h1>
+<h2>Checklist</h2>
+<checklist [title]="checklistTitle" [inList]="checkList" [rootClass]="checkRootClass" [listItemClass]="'x y'" [labelClass]="'xc cc'"></checklist>
+<div *ngFor="let item of checkList">{{item.label}} {{item.checked}}</div>

@@ -1,0 +1,4 @@
+<div>{{title}}</div>
+<div *ngFor="let item of inList" [class]="rootClass">
+	<div [class]="listItemClass"><input type="checkbox" [(ngModel)]="item.checked" ng-true-value="true" ng-false-value="false"><div [class]="labelClass">{{item.label}}</div></div>
+</div>
