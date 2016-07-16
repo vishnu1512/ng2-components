@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ChecklistComponent } from './checklist/checklist.component';
-import {CheckItem} from './checklist/CheckItem';
+import {Checkitem} from './checklist/CheckItem';
 
 @Component({
   selector: 'my-app',

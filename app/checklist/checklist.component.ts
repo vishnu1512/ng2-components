@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {CheckItem} from './CheckItem';
+import {Checkitem} from './CheckItem';
 
 @Component({
   selector: 'checklist',
@@ -12,13 +12,13 @@ export class ChecklistComponent {
 	title:String;
 
 	@Input()
-	inList:CheckItem[];
+	inList:Checkitem[];
 
 	@Input()
-	rootClass:String;
+	tableClass:String;
 
 	@Input()
-	listItemClass:String
+	titleClass:String
 
 	@Input()
 	labelClass:String
