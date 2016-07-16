@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {Checkitem} from './CheckItem';
 
 @Component({
@@ -7,7 +7,7 @@ import {Checkitem} from './CheckItem';
 
 })
 
-export class ChecklistComponent { 
+export class ChecklistComponent extends OnInit{ 
 	@Input()
 	title:String;
 
@@ -18,12 +18,30 @@ export class ChecklistComponent {
 	tableClass:String;
 
 	@Input()
-	titleClass:String
+	titleClass:String;
 
 	@Input()
-	labelClass:String
+	labelClass:String;
 
-	valueChanged(item){
-		console.log(item);
+	@Input()
+	rootClass:String;
+
+	@Input()
+	columns:Number = 1;
+
+	displayList:Checkitem[][] = [];
+
+	ngOnInit(){
+		var currentList = [];
+		for(let item of this.inList){
+			if(currentList.length < this.columns){
+				currentList.push(item);
+			}else{
+				this.displayList.push(currentList);
+				currentList=[];
+				currentList.push(item);
+			}
+		}
+		this.displayList.push(currentList);
 	}
 }

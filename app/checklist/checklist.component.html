@@ -1,6 +1,8 @@
-<div [class]="titleClass">{{title}}</div>
+<div [class]="titleClass">{{title}} {{columns}}</div>
 <table [class]="tableClass">
-	<tr *ngFor="let item of inList" [class]="rootClass">
-		<td><input type="checkbox" [(ngModel)]="item.checked" ng-true-value="true" ng-false-value="false"></td><td [class]="labelClass">{{item.label}}</td>
+	<tr *ngFor="let itemArray of displayList" [class]="rootClass">
+		<xyz *ngFor="let item of itemArray">
+			<td><input type="checkbox" [(ngModel)]="item.checked" ng-true-value="true" ng-false-value="false"></td><td [class]="labelClass">{{item.label}}</td>
+		</xyz>
 	</tr>
 </table>
